@@ -7,6 +7,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -76,6 +78,7 @@ public class Goods {
 
     @ApiModelProperty("商品详情页轮播图(逗号分隔)")
     @TableField("main_pictures")
+    @JsonIgnore
     private String mainPictures;
 
     @ApiModelProperty("商品详情图片(逗号分隔)")
